@@ -7,7 +7,7 @@
     // $app['debug'] = true;
 
     $app->register(new Silex\Provider\TwigServiceProvider(), array(
-        'twig.path'=> __DIR__.'/../views'
+        'twig.path' => __DIR__.'/../views'
     ));
 
     //Route for default directory
@@ -17,7 +17,7 @@
 
     //Route returned when form is submitted.
     $app->get("/translated", function() use ($app) {
-        return $app['twig']->render('translate.html.twig', array('result' => $output))
+        return $app['twig']->render('translate.html.twig', array('result' => $output));
     });
 
 
